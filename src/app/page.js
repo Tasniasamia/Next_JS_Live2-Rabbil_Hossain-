@@ -10,6 +10,10 @@ const page = () => {
 }
   return (
     <div>
+      <img src='/banner.png'/>
+      <img src='/doctor.png'/>
+      <img src='/people.png'/>
+
       This is Home Page
 
 
