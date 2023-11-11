@@ -1,11 +1,22 @@
+// import React from 'react';
+
+// const page = ({searchParams}) => {
+//     console.log(searchParams.Id);
+    
+//     return (
+//         <div>
+//             Product details
+//         </div>
+//     );
+// };
+
+// export default page;
 import React from 'react';
 
-const page = ({searchParams}) => {
-    console.log(searchParams.Id);
-    
+const page = () => {
     return (
         <div>
-            Product details
+            Id page
         </div>
     );
 };
