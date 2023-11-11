@@ -1,24 +1,26 @@
-"use client"
-import { useRouter, useSearchParams } from 'next/navigation';
-import React, { useState } from 'react';
+"use client";
+import React from 'react';
+import { useRouter } from 'next/router'; // Change the import statement
+import Image from 'next/image';
 
 const page = () => {
-    const searchParams=useSearchParams();
-    console.log("email",searchParams.get("email"));
-    console.log("password",searchParams.get("password"));
-    const router = useRouter();
-    
-    const findId = (id) => {
-        router.push(`/Product/${id}`);
-    }
-   
+  const router = useRouter();
 
-    return (
-        <div>
-            Product All
-            <button onClick={() => { findId("1230sdfe232") }}>View Details</button>
-        </div>
-    );
+  const findQuery = (email, password) => {
+    router.push(`/Product?email=${email}&password=${password}`);
+  };
+
+  return (
+    <div>
+      <Image src='/banner.png' alt="Description of the image" width={500} height={300} />
+      <Image src='/doctor.png' alt="Description of the image" width={500} height={300} />
+      <Image src='/people.png' alt="Description of the image" width={500} height={300} />
+
+      This is Home Page
+
+      <button onClick={() => { findQuery('tasnia@qwikit.com', 'password') }}>Find Query</button>
+    </div>
+  );
 };
 
 export default page;
