@@ -7,9 +7,9 @@ const Navbar = () => {
             <Link href="/">Home</Link>
             <Link href="/About">About</Link>
             <Link href="/Product">Product</Link>
-            {/* <Link href={{ pathname: "/blog", query: { email: "tasnia@gmail.com" } }}>
+            <Link href={{ pathname: "/blog", query: { email: "tasnia@gmail.com" } }}>
                BLog
-            </Link> */}
+            </Link>
         </div>
     );
 };

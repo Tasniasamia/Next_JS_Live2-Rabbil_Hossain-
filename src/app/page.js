@@ -1,16 +1,17 @@
 "use client"
 import React, { useEffect } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const page = () => {
-  // const router = useRouter();
+  const router = useRouter();
 
 
     // Check if `router` is available before using it
-    // if (router) {
-    //   const findQuery = (email, password) => {
-    //     router.push(`/Product?email=${email}&password=${password}`);
-    //   };
+    if (router) {
+      const findQuery = (email, password) => {
+        router.push(`/Product?email=${email}&password=${password}`);
+      };
       
       return (
         <div>
@@ -20,11 +21,11 @@ const page = () => {
     
           This is Home Page
     
-          {/* <button onClick={() => { findQuery('tasnia@qwikit.com', 'password') }}>Find Query</button> */}
+          <button onClick={() => { findQuery('tasnia@qwikit.com', 'password') }}>Find Query</button>
         </div>
       );
     }
-  
+}
 
   // Handle the case where router is not available
 
